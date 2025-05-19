@@ -1,0 +1,116 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #a814b6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px; /* Adiciona um pouco de padding nas bordas em telas menores */
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px; /* Reduz o padding em telas menores */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* O container ocupa toda a largura disponível em telas menores */
+    max-width: 600px; /* Mantém um limite máximo de largura para telas maiores */
+}
+
+h1 {
+    color: #8c1197;
+    margin-bottom: 20px;
+    font-size: 1.8em; /* Reduz um pouco o tamanho da fonte em telas menores */
+}
+
+button {
+    background-color: #9b12ad;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+    width: 100%; /* O botão ocupa toda a largura disponível em telas menores */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.resultado {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+    width: 100%; /* O resultado ocupa toda a largura disponível em telas menores */
+    box-sizing: border-box;
+}
+
+.resultado h2 {
+    color: #6c0775;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.4em; /* Reduz um pouco o tamanho da fonte em telas menores */
+}
+
+.resultado ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Reduz o espaçamento entre os números em telas menores */
+    justify-content: center; /* Centraliza os números em telas menores */
+}
+
+.resultado ul li {
+    background-color: #9f5eb3;
+    color: #030303;
+    padding: 6px 10px; /* Reduz o padding dos itens da lista em telas menores */
+    border-radius: 5px;
+    font-size: 18px; /* Reduz o tamanho da fonte dos números em telas menores */
+    margin-bottom: 5px; /* Adiciona um pouco de margem inferior para melhor separação em telas menores */
+}
+
+/* Estilos para telas maiores (desktop) */
+@media (min-width: 769px) {
+    .container {
+        padding: 30px;
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    button {
+        width: auto; /* Retorna o botão ao tamanho automático em telas maiores */
+    }
+
+    .resultado {
+        padding: 15px;
+    }
+
+    .resultado h2 {
+        font-size: 1.6em;
+    }
+
+    .resultado ul {
+        gap: 8px;
+        justify-content: flex-start; /* Alinha os números à esquerda em telas maiores */
+    }
+
+    .resultado ul li {
+        font-size: 16px;
+        padding: 8px 12px;
+        margin-bottom: 0; /* Remove a margem inferior extra em telas maiores */
+    }
+}
